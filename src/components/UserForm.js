@@ -1,10 +1,10 @@
-import React, { useState,Link } from 'react';
+import React, { useState } from 'react';
 import Registration from "./Registration"
-import {useNavigate} from 'react-router-dom';
+
 import Profile from './Profile';
 
 function UserForm() {
-    // const navigate=useNavigate();
+        
     const [page, setPage] = useState(0);
     const [formData, setFormData] = useState({
         firstname: "",
@@ -53,7 +53,7 @@ function UserForm() {
                     >
                         Previous
                     </button>
-                    
+
                     <button
                         type='submit'
                         disabled={page === FormTitles.length - 1}
@@ -61,12 +61,9 @@ function UserForm() {
                             setPage((currentPage) => currentPage + 1);
                             
                         }}
-                        
                     >
-
                         Submit
                     </button>
-                    
                 </div>
 
             </div>
